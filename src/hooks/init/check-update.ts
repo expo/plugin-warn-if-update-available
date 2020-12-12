@@ -32,7 +32,7 @@ const hook: Hook<'init'> = async function ({config}) {
         const chalk: typeof Chalk = require('chalk')
         const template: typeof Template = require('lodash.template')
         // Default message if the user doesn't provide one
-        this.warn(template(message)({
+        this.log(template(message)({
           chalk,
           config,
           ...distTags,
